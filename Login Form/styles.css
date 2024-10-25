@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-section {
+    background-color:orange;
+    color: white;
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    background-color:black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%; 
+    max-width: 400px; 
+}
+
+.login-container {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-container input {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%; 
+}
+.hidden {
+    display: none; 
+}
+
+
+button:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0; 
+}

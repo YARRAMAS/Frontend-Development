@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jala Academy Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Jala Academy</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Welcome to Jala Academy</h2>
+            <p>Use the credentials below to log in:</p>
+            <p>Email: training@jalaacademy.com<br>Password: jobprogram</p>
+            <div class="login-container">
+                <form action="/login" method="POST">
+                    <input type="text" name="email" id="email" placeholder="Enter Email or Mobile" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember Me</label>
+                    </div><br>
+                    <button type="submit">Sign In</button><br><br>
+                    <div>--- OR ---</div><br>
+                    <!-- Within your login form -->
+                    <a href="/forgot-password">Forgot Password?</a><br><br/>
+
+                    
+                        <a href="/admin-login">Admin Login</a>
+                    
+                </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div style="color: red;">
+                            <ul>
+                                {% for message in messages %}
+                                    <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>JALA Academy offers Job Guaranteed Programs for Freshers to 12 years’ experience on Full Stack Development / Automation Testing / Dev-Ops / QA/ SDET/Cyber Security / RPA / Cloud Technologies.</p>
+        <p>Training would be completely on live Project scenarios Read our website JALA Academy for more details: <a href="https://jalaacademy.com/">https://jalaacademy.com/</a></p>
+    </footer>
+</body>
+</html>
